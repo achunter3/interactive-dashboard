@@ -1,5 +1,6 @@
  # Interactive Productivity Dashboard
- This project contains a web-based dashboard for WEB-115 to demonstrate interactive JavaScript features.
+ **Student Name:** Aaron Hunter
+ This project contains a web-based dashboard for **WEB-115** to demonstrate interactive **JavaScript** features.
  ## TODO: Future Enhancements
 - [ ] Coming Soon...
 - [ ] Coming Soon...
