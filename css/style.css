@@ -20,7 +20,7 @@ p {
     text-align: center;
 }
 
-#weekly-tasks {
+#weekly-tasks, #metric-converter {
     background-color: rgb(243, 243, 243);
     color: rgb(0, 0, 0);
     max-width: 600px;
@@ -30,14 +30,25 @@ p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-#weekly-tasks form div {
+#weekly-tasks form div, #metric-converter form div {
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-#goal-message {
+#goal-message, #conversion-result {
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: bold;
     margin-top: 15px;
+}
+
+#form-title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.row {
+    gap: 15px;
 }

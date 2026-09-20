@@ -22,6 +22,9 @@
              <div class="col" id="weekly-tasks">
                 <!-- Weekly tasks go here -->
                 <script src="js/task-manager.js" defer></script>
+                <div>
+                <p id="form-title">Weekly Task Tracker</p>
+                </div>
                 <form>
                     <div>
                     <label for="name">Name:</label>
@@ -40,7 +43,37 @@
                     <button type="button" id="goal-btn" class="btn btn-primary">Set Goal</button>
                 </form>
                 <p id="goal-message"></p>
-             </div>   
+             </div> 
+             <div class="col" id="metric-converter">
+                <!-- Metric and Imperial Converter-->
+                <script src="js/metric-converter.js" defer></script>
+                <div>
+                <p id="form-title">Metric Converter</p>
+                </div>
+                <form>
+                    <div>
+                    <label for="numeric-value">Value to Convert:</label>
+                    <input type="number" id="numeric-value" name="numeric-value" min="0">
+                    </div>
+                    <div>
+                    <label for="conversion-type">What to Convert:</label>
+                    <select id="conversion-type" name="conversion-type">
+                        <option value="Inch to Centimeter">Inch to Centimeter</option>
+                        <option value="Centimeter to Inch">Centimeter to Inch</option>
+                        <option value="Foot to Centimeter">Foot to Centimeter</option>
+                        <option value="Centimeter to Foot">Centimeter to Foot</option>
+                        <option value="Yard to Meter">Yard to Meter</option>
+                        <option value="Meter to Yard">Meter to Yard</option>
+                        <option value="Mile to Kilometer">Mile to Kilometer</option>
+                        <option value="Kilometer to Mile">Kilometer to Mile</option>
+                    </select>
+                    </div>
+                    <div>
+                    <button type="button" id="convert-btn" class="btn btn-primary">Convert</button>
+                    </div>
+                </form>
+                <p id="conversion-result"></p>
+             </div>  
         </div>
     </div>
 </body>
