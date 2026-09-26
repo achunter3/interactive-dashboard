@@ -63,3 +63,9 @@ This project contains a web-based dashboard for **WEB-115** to demonstrate inter
         END IF
 
     END FUNCTION
+
+## Magic 8 Ball Game
+- This feature allows you to ask a question and recieve a random answer back.
+ - Question box must be filled before asking the queestion.
+ - The ask another question button will clear the previous answer.
+ - You can add a custom answer to the list of possible answers at the bottom.

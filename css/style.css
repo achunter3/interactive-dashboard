@@ -16,11 +16,21 @@ p {
 }
 
 .script-text {
-    color: rgb(243, 243, 243);
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
-#weekly-tasks, #metric-converter {
+#header-bar {
+    background-color: rgb(243, 243, 243);
+    color: rgb(0, 0, 0);
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#weekly-tasks, #metric-converter, #magic-eight-ball{
     background-color: rgb(243, 243, 243);
     color: rgb(0, 0, 0);
     max-width: 600px;
@@ -42,7 +52,7 @@ p {
     margin-top: 15px;
 }
 
-#form-title {
+.heading {
     color: rgb(0, 0, 0);
     text-align: center;
     font-weight: bold;
@@ -51,4 +61,18 @@ p {
 
 .row {
     gap: 15px;
+}
+
+#magic-eight-ball input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
 }

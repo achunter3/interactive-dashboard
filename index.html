@@ -11,11 +11,16 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>My Interactive Dashboard</h1>
-    <p>This dashboard was created by Aaron Hunter for the WEB-115 course at Wake Tech</p>
-    <script>document.write('<p class="script-text">This dashboard demonstrates how JavaScript can be used to create interactive websites.</p>');</script>
-    <!-- The <noscript> is for web browsers with JavaScript rendering disabled. -->
-    <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
+    <div class="container">
+        <div class="row" id="header-bar">
+            <div class="col">
+                <h1 class="title">My Interactive Dashboard</h1>
+                <p class="title">This dashboard was created by Aaron Hunter for the WEB-115 course at Wake Tech</p>
+                <script>document.write('<p class="script-text">This dashboard demonstrates how JavaScript can be used to create interactive websites.</p>');</script>
+                <!-- The <noscript> is for web browsers with JavaScript rendering disabled. -->
+                <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
+            </div>
+    </div>
     <div class="container">
         <div class="row">
             <!-- Dashboard Content -->
@@ -23,7 +28,7 @@
                 <!-- Weekly tasks go here -->
                 <script src="js/task-manager.js" defer></script>
                 <div>
-                <p id="form-title">Weekly Task Tracker</p>
+                <h2 class="heading">Weekly Task Tracker</h2>
                 </div>
                 <form>
                     <div>
@@ -48,7 +53,7 @@
                 <!-- Metric and Imperial Converter-->
                 <script src="js/metric-converter.js" defer></script>
                 <div>
-                <p id="form-title">Metric Converter</p>
+                <h2 class="heading">Metric Converter</h2>
                 </div>
                 <form>
                     <div>
@@ -73,7 +78,26 @@
                     </div>
                 </form>
                 <p id="conversion-result"></p>
-             </div>  
+             </div> 
+             <div class="col" id="magic-eight-ball">
+                <script src="/js/magic-eight-ball.js" defer></script>
+                <link rel="stylesheet" href="css/magic-eight-ball.css">
+                <h2 class="heading">Magic Eight Ball</h2>
+                <form>
+                <p id="instructions">Type a yes/no question below, then click on the Eight Ball below to get your answer!</p>
+                <input id="question" name="question" size="80">
+                <div id="magicEightBall">
+                    <div id="circle">
+                        <p id="magic-answer"></p>
+                    </div>
+                    <img id="ball" src="img/magic-eight-ball.png"/>
+                </div>
+                <button id="reset" name="reset" type="reset" class="btn btn-primary">Ask another question</button>
+                <input id="new-answer" name="new-answer" size="80">
+                <button id="add-answer" name="add-answer" type="button" class="btn btn-primary">Add New Answer</button>
+                </form>
+                <br>
+            </div> 
         </div>
     </div>
 </body>
