@@ -75,3 +75,58 @@ p {
     font-weight: bold;
     margin-top: 5px;
 }
+
+/* Weekly Task List */
+#task-list {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#task-list h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#task-list p {
+    color: rgb(0, 0, 0);
+}
+
+#task-list label {
+    font-weight: bold;
+}
+
+/* Keep the label and button on one line; let the input shrink instead */
+#task-list label, #task-list button {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#task-list form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#task-list input {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#user-tasks {
+    list-style: none;
+    padding: 0;
+}
+
+#user-tasks li {
+    background-color: white;
+    border-left: 4px solid rgb(0, 83, 161);
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
