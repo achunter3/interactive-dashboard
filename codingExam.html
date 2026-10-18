@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Midterm Coding Exam</title>
+</head>
+<body>
+    <!-- name, email, and date -->
+    <p>Aaron Hunter</p>
+    <p>achunter3@my.waketech.edu</p>
+    <p>October 18, 2026</p>
+    <!-- create a button -->
+    <button id="Button1">Amortization Calculator</button>
+    <!-- Output Div for the results -->
+    <div id="output"></div>
+    <!-- Embedded JavaScript -->
+    <script>
+        // Event listener for when the button is clicked
+        document.getElementById("Button1").addEventListener("click", function () {
+            // Use prompts to get the loan amount and term from the user
+            let loanAmount = parseFloat(prompt("Enter the loan amount (without commas):"));
+            let termYears = parseInt(prompt("Enter the loan term in years (either 30 or 15):"));
+            // Set the interest rate to 5.75%
+            let interestRate = 0.0575;
+            // Calculate the number of months in the term
+            let termMonths = termYears * 12;
+            // Calculate the monthly payment using the formula
+            let monthlyPayment = (((interestRate / 12) * loanAmount) / (1 - Math.pow(1 + (interestRate / 12), (termYears * -12)))).toFixed(2);
+            monthlyPayment = parseFloat(monthlyPayment);
+            // Calculate total interest and total mortgage amount
+            let totalInterest = (monthlyPayment * termMonths) - loanAmount;
+            let totalLoan = loanAmount + totalInterest;
+            // Build the results that will be displayed on the page
+            let result = "";
+            result += "<p>Mortgage term in years: " + termYears + "</p>";
+            result += "<p>Mortgage interest rate: " + (interestRate * 100).toFixed(2) + "%</p>";
+            result += "<p>Mortgage amount: $" + loanAmount.toFixed(2) + "</p>";
+            result += "<p>Total interest amount: $" + totalInterest.toFixed(2) + "</p>";
+            result += "<p>Total mortgage amount: $" + totalLoan.toFixed(2) + "</p>";
+            result += "<p>Calculated monthly payment: $" + monthlyPayment.toFixed(2) + "</p>";
+            // Use a for loop to go through every month and subtract the payment from the balance
+            let balance = totalLoan;
+            for (let month = 1; month <= termMonths; month++) {
+                // Subtract the monthly payment from the balance
+                balance = balance - monthlyPayment;
+                // Add the payment line to the result
+                result += "<p>Month " + month + ": Payment $" + monthlyPayment.toFixed(2) +
+                          " | Balance $" + balance.toFixed(2) + "</p>";
+                // When the balance reaches 0, print the ending message
+                if (balance === 0) {
+                    result += "<p>Ending...</p>";
+                }
+            // Alert the user if the loan term is not 15 or 30 years
+            if (termYears !== 15 && termYears !== 30) {
+                alert("The loan term is not 15 or 30 years.");
+                Return;
+            }
+            }
+            // Add the results to the output div on the page
+            document.getElementById("output").innerHTML = result;
+        });
+    </script>
+</body>
+</html>
