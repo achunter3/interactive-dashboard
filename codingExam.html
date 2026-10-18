@@ -42,6 +42,10 @@
             for (let month = 1; month <= termMonths; month++) {
                 // Subtract the monthly payment from the balance
                 balance = balance - monthlyPayment;
+                // Tiny decimal leftovers can make the last balance -0.00000001, so treat it as 0
+                if (balance < 0.01) {
+                    balance = 0;
+                }
                 // Add the payment line to the result
                 result += "<p>Month " + month + ": Payment $" + monthlyPayment.toFixed(2) +
                           " | Balance $" + balance.toFixed(2) + "</p>";
