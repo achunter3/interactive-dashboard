@@ -14,7 +14,7 @@ let answers = [
         "Ask again later.",
     ]
 // Add event listener for the magic eight ball - This will display an answer when the user clicks on the magic eight ball.
-document.getElementById("magicEightBall").addEventListener("mouseup", function(event) {
+document.getElementById("magicEightBall").addEventListener("mousedown", function(event) {
     event.preventDefault();
     question = document.getElementById("question").value.trim();
     if (question == "") {
