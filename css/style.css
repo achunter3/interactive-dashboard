@@ -104,13 +104,14 @@ p {
 
 #task-list form {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     align-items: center;
     margin-bottom: 15px;
 }
 
-#task-list input {
-    flex: 1;
+#task-name {
+    flex: 1 1 150px;
     min-width: 0;
     padding: 6px 10px;
     border: 1px solid #ccc;
@@ -129,4 +130,42 @@ p {
     margin-bottom: 6px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#delete-list {
+    margin-bottom: 15px;
+}
+
+/* Priority label next to the task name */
+.priority-label {
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+#user-tasks button {
+    margin-top: 6px;
+    margin-right: 6px;
+}
+
+/* A task in edit mode */
+#user-tasks li.editing {
+    background-color: #eef5ff;
+    border: 2px dashed rgb(0, 83, 161);
+    border-left-width: 4px;
+}
+
+#user-tasks li.editing input[type="text"] {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+#user-tasks li.editing select {
+    margin-right: 8px;
 }

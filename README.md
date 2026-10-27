@@ -3,7 +3,7 @@
 This project contains a web-based dashboard for **WEB-115** to demonstrate interactive **JavaScript** features.
 ## TODO: Future Enhancements
 - [X] Add a Weekly Task Goal Calculator,
-- [ ] Coming Soon...
+- [X] Add a Task Manager
 - [ ] Coming Soon...
 ## Weekly Task Goals
 - This feature allows a user to enter their name, Daily Task Goal, and Weekly Bonus Tasks to calculate their Total Weekly Goal!
@@ -69,3 +69,11 @@ This project contains a web-based dashboard for **WEB-115** to demonstrate inter
  - Question box must be filled before asking the queestion.
  - The ask another question button will clear the previous answer.
  - You can add a custom answer to the list of possible answers at the bottom.
+
+## Task Manager
+- Enter a task name, choose a priority (High, Medium, Low), and check Important if needed, then click Add Task (or press Enter).
+- Each task shows its name and a colored priority label (orange = High, gold = Medium, green = Low).
+- Important tasks are shown in red. Complete crosses out the task; click Undo to reverse it.
+- Edit opens a small form on the task to change its name, priority, or importance. Save keeps the changes; Cancel discards them.
+- Delete removes one task; Delete List removes all of them.
+- Tasks are stored in an array of objects (id, name, priority, isImportant, isCompleted), and the full list is logged to the console with JSON.stringify() every time a task is added, updated, or deleted.
