@@ -1,14 +1,16 @@
 
 #magic-eight-ball {
-  max-width: 410px;
   text-align: center;
-  margin: auto;
 }
 
 #magicEightBall {
   position: relative;
   display: inline-block;
   z-index: 1;
+}
+
+#ball {
+  max-width: 100%;
 }
 
 #circle {

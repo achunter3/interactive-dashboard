@@ -1,0 +1,35 @@
+#digital-clock {
+    background-color: rgb(243, 243, 243);
+    color: rgb(0, 0, 0);
+    /* Line up with the header bar: same width and left/right edges */
+    margin: 0 12px;
+    padding: 4px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* Put the heading, time, and date side by side in one line */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2px 20px;
+}
+
+#digital-clock h3 {
+    font-weight: bold;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+#clock-face {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: rgb(0, 83, 161);
+    margin: 0;
+}
+
+#calendar-date {
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}

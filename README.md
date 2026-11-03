@@ -4,7 +4,7 @@ This project contains a web-based dashboard for **WEB-115** to demonstrate inter
 ## TODO: Future Enhancements
 - [X] Add a Weekly Task Goal Calculator,
 - [X] Add a Task Manager
-- [ ] Coming Soon...
+- [X] Add a Digital Clock
 ## Weekly Task Goals
 - This feature allows a user to enter their name, Daily Task Goal, and Weekly Bonus Tasks to calculate their Total Weekly Goal!
 ## Imperial/Metric Converter
@@ -65,8 +65,8 @@ This project contains a web-based dashboard for **WEB-115** to demonstrate inter
     END FUNCTION
 
 ## Magic 8 Ball Game
-- This feature allows you to ask a question and recieve a random answer back.
- - Question box must be filled before asking the queestion.
+- This feature allows you to ask a question and receive a random answer back.
+ - Question box must be filled before asking the question.
  - The ask another question button will clear the previous answer.
  - You can add a custom answer to the list of possible answers at the bottom.
 
@@ -77,3 +77,9 @@ This project contains a web-based dashboard for **WEB-115** to demonstrate inter
 - Edit opens a small form on the task to change its name, priority, or importance. Save keeps the changes; Cancel discards them.
 - Delete removes one task; Delete List removes all of them.
 - Tasks are stored in an array of objects (id, name, priority, isImportant, isCompleted), and the full list is logged to the console with JSON.stringify() every time a task is added, updated, or deleted.
+
+## Digital Clock
+- Shows the current local time and date, updating every second.
+- Uses the Date object: getHours(), getMinutes(), and getSeconds() for the time, and toLocaleDateString() for the date.
+- setInterval() runs updateClock() every 1000 milliseconds; updateClock() is also called once on page load so the clock shows right away.
+- Time is shown in 12-hour format with AM/PM. Hours of 12 or more set the session to PM, hour 0 becomes 12, and values under 10 get a leading "0".
