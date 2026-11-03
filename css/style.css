@@ -24,7 +24,8 @@ p {
     background-color: rgb(243, 243, 243);
     color: rgb(0, 0, 0);
     max-width: 1600px;
-    margin: 30px auto;
+    /* Small 6px gap below the header so the clock banner sits close to it */
+    margin: 30px auto 6px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -32,8 +33,7 @@ p {
 #weekly-tasks, #metric-converter, #magic-eight-ball{
     background-color: rgb(243, 243, 243);
     color: rgb(0, 0, 0);
-    max-width: 600px;
-    margin: 30px auto;
+    margin: 30px 12px;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
